@@ -8,12 +8,14 @@ import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const distPath = path.resolve(__dirname, '../frontend/dist');
+app.use(express.static(distPath));
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 dotenv.config()
 
-app.use(express.static(path.join(__dirname, "../frontend/dist")));
 app.use(cors());
 app.use(express.json());
 
@@ -120,8 +122,9 @@ app.get('/api/repositories/random', async (req, res) => {
     }
 });
 
-app.use('*', (req, res) => {
-      res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 // Error handling middleware
