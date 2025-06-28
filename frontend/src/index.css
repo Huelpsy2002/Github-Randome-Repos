@@ -1,0 +1,107 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  align-items: center;
+
+  
+}
+
+
+.DropDownContainer{
+ 
+  position: relative;
+  margin: auto;
+}
+.DropDownInput{
+   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 12px;
+}
+.DropDownInput:hover {
+  background-color: #f0f0f0; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+  cursor: pointer;
+}
+.DropDownList{
+   position: absolute;
+  z-index: 10;
+  display: flex;
+  font-size: 10px; 
+  margin-left:-120px;
+  
+
+}
+
+
+.RepoContainer{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  width: 400px;
+  height: 200px;
+  background-color: rgb(225, 217, 217);
+  border-radius: 12px;
+
+}
+
+.Refresh {
+  margin-top: 40px;
+  margin-left: 90px;
+  width: 200px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+
+.Refresh:hover {
+  background-color: #474646; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+  cursor: pointer;
+}
+.Repo {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  padding: 10px;
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 12px;
+  
+}
+.RepoData{
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  
+}
+a {
+   text-decoration: none;
+  color: inherit;
+}
+.Repo:hover{
+  background-color: #ece8e8; 
+}
+#description{
+  color: rgb(139, 139, 139);
+  padding: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
