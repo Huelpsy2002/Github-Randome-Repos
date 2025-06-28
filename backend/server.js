@@ -3,6 +3,7 @@ import axios from "axios";
 import cors from "cors"
 import dotenv from  "dotenv"
 import { fileURLToPath } from 'url';
+import path from 'path';
 
 
 const __filename = fileURLToPath(import.meta.url);
