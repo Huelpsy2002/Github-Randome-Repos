@@ -1,8 +1,12 @@
 {
-  "name": "fullstack-app",
+  "name": "github-random-repos-fullstack",
   "version": "1.0.0",
   "scripts": {
+    "build": "cd frontend && npm install && npm run build",
     "start": "cd backend && npm start",
-    "heroku-postbuild": "cd frontend && npm install && npm run build"
+    "postbuild": "cd backend && npm install"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
