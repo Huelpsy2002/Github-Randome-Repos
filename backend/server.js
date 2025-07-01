@@ -10,6 +10,27 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const distPath = path.resolve(__dirname, '../frontend/dist');
 
+// Add at the very top of your server file
+process.on('SIGTERM', () => {
+    console.log('SIGTERM received, shutting down gracefully');
+    process.exit(0);
+});
+
+process.on('uncaughtException', (error) => {
+    console.error('Uncaught Exception:', error);
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+    process.exit(1);
+});
+
+// Add startup logging
+console.log('Starting server...');
+console.log('Node version:', process.version);
+console.log('Working directory:', process.cwd());
+console.log('Environment variables loaded');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
