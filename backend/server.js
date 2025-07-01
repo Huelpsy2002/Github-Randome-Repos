@@ -42,7 +42,11 @@ const githubConfig = {
 
 // Route to get a random repository
 app.get('/api/repositories/random', async (req, res) => {
+    console.log('API Request received:', req.query);
+
     try {
+        console.log('API Response sent successfully');
+
         const { language } = req.query;
         
         if (!language) {
@@ -100,6 +104,11 @@ app.get('/api/repositories/random', async (req, res) => {
         });
 
     } catch (error) {
+        console.error('API Error Details:', {
+            status: error.response?.status,
+            data: error.response?.data,
+            message: error.message
+        });
         console.error('GitHub API Error:', error.response?.data || error.message);
         
         if (error.response?.status === 403) {
