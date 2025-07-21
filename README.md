@@ -10,7 +10,8 @@ A simple and fun web application that fetches and displays a random public repos
 
 - Fetches a random public GitHub repository
 - Displays repository name, description,forks,stars and link
-- Built with HTML, CSS, and JavaScript
+- Built with HTML, CSS, and React for frontend
+- built with expressjs for backend
 
 
 
@@ -21,6 +22,5 @@ A simple and fun web application that fetches and displays a random public repos
 - JavaScript
 - React
 - GitHub REST API
+- used nginx as proxy on an Ec2 free instance 
 - app hosted on AWS EC2 with free domain from https://www.duckdns.org/
-
-## 🧑‍💻 How to Run Locally
