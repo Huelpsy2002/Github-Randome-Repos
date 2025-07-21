@@ -18,7 +18,7 @@ function RepoContainer(props) {
         setState("Loading,Please Wait")
         try {
             let config = {
-                url: `http://localhost:3001/api/repositories/random?language=${props.language}`
+                url: `/api/repositories/random?language=${props.language}`
             }
             let res = await axios(config)
             if (res.status != 200) {
