@@ -4,7 +4,7 @@ A simple and fun web application that fetches and displays a random public repos
 
 ## 🌐 Live Demo
 
-(http://http://13.61.178.124/)
+[http://13.61.178.124/](click here)
 
 *(Replace with your actual EC2 IP or domain if needed)*
 
